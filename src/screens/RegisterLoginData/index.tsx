@@ -55,13 +55,13 @@ export function RegisterLoginData() {
 
     const parsedData = JSON.parse(response) || [];
 
-    const newloginListData = [
-      ...persedData,
+    const newLoginListData = [
+      ...parsedData,
       newLoginData
     ];
     await AsyncStorage.setItem
     (dataKey,
-       JSON.stringfy(newloginListData)
+       JSON.stringify(newLoginListData)
        );
 
   navigate('Home');
